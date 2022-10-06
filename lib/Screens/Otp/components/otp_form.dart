@@ -1,6 +1,5 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:studentapp/Screens/Profile/profile.dart';
 import 'package:studentapp/components/default_button.dart';
 import 'package:studentapp/constants.dart';
 import '../../../size_config.dart';
@@ -121,7 +120,7 @@ class _OtpFormState extends State<OtpForm> {
           DefaultButton(
             text: "SUBMIT",
             press: () {
-              Navigator.pushNamed(context, ProfileScreen.routeName);
+             // Navigator.pushNamed(context, ProfileScreen.routeName);
             },
           ),
         ]),

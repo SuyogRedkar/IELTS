@@ -20,6 +20,7 @@ class _RegisterFormState extends State<RegisterForm> {
   String? lname;
   String? contact;
   String? email;
+  bool remember = false;
   final List<String?> errors = [];
 
   void addError({String? error}) {
@@ -42,6 +43,7 @@ class _RegisterFormState extends State<RegisterForm> {
   Widget build(BuildContext context) {
     SizeConfig().init(context);
     return Form(
+      key: _formKey,
         child: SingleChildScrollView(
       child: Column(
         children: [

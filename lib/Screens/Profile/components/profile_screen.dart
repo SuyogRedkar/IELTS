@@ -10,7 +10,7 @@ class Body extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        spacer(100.0),
+        spacer(300.0),
         DefaultButton(
           text: "SUBMIT",
           press: () {
