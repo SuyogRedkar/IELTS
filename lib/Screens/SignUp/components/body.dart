@@ -29,7 +29,7 @@ class Body extends StatelessWidget {
               ),
               Text(
                 'We will send you an One Time Password on this \nmobile number.',
-                style: Theme.of(context).textTheme.headline3,
+                style: Theme.of(context).textTheme.headline4,
                 textAlign: TextAlign.center,
               ),
               Padding(
@@ -40,7 +40,7 @@ class Body extends StatelessWidget {
                     alignment: Alignment.topLeft,
                     child: Text(
                       'Contact Number',
-                      style: Theme.of(context).textTheme.headline5,
+                      style: Theme.of(context).textTheme.headline3,
                     )),
               ),
               const SignUpForm()

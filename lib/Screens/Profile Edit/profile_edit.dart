@@ -7,8 +7,11 @@ class ProfileEditScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Body(),
+    return Scaffold(
+      appBar: AppBar(
+        toolbarHeight: 120,
+      ),
+      body: const Body(),
     );
   }
 }

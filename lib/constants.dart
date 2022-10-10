@@ -47,3 +47,9 @@ OutlineInputBorder outlineInputBorder(width) {
     borderSide: const BorderSide(color: kSecondary),
   );
 }
+
+final dropdownInputDecoration = BoxDecoration(
+  color: kBase, //background color of dropdown button
+  border: Border.all(color: kSecondary, width: 1), //border of dropdown button
+  borderRadius: BorderRadius.circular(4),
+);

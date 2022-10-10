@@ -50,7 +50,7 @@ class _SignUpFormState extends State<SignUpForm> {
               RichText(
                   text: TextSpan(
                       text: "New User?",
-                      style: Theme.of(context).textTheme.headline3,
+                      style: Theme.of(context).textTheme.headline4,
                       children: [
                     TextSpan(
                         text: "\tRegister",

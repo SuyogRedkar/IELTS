@@ -43,89 +43,89 @@ class _RegisterFormState extends State<RegisterForm> {
   Widget build(BuildContext context) {
     SizeConfig().init(context);
     return Form(
-      key: _formKey,
+        key: _formKey,
         child: SingleChildScrollView(
-      child: Column(
-        children: [
-          Align(
-            alignment: Alignment.topLeft,
-            child: Text(
-              'Your Name',
-              style: Theme.of(context).textTheme.headline5,
-            ),
-          ),
-          spacer(8.0),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          child: Column(
             children: [
-              SizedBox(
-                height: getProportionateScreenHeight(40),
-                width: getProportionateScreenWidth(154),
-                child: buildFnameFormField(),
+              Align(
+                alignment: Alignment.topLeft,
+                child: Text(
+                  'Your Name',
+                  style: Theme.of(context).textTheme.headline3,
+                ),
               ),
+              spacer(8.0),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  SizedBox(
+                    height: getProportionateScreenHeight(40),
+                    width: getProportionateScreenWidth(154),
+                    child: buildFnameFormField(),
+                  ),
+                  SizedBox(
+                    height: getProportionateScreenHeight(40),
+                    width: getProportionateScreenWidth(154),
+                    child: buildLnameFormField(),
+                  )
+                ],
+              ),
+              spacer(8.0),
+              Align(
+                alignment: Alignment.topLeft,
+                child: Text(
+                  'Contact Number',
+                  style: Theme.of(context).textTheme.headline3,
+                ),
+              ),
+              spacer(8.0),
               SizedBox(
                 height: getProportionateScreenHeight(40),
-                width: getProportionateScreenWidth(154),
-                child: buildLnameFormField(),
-              )
+                width: getProportionateScreenWidth(328),
+                child: buildContactFormField(),
+              ),
+              spacer(16.0),
+              Align(
+                alignment: Alignment.topLeft,
+                child: Text(
+                  'Email',
+                  style: Theme.of(context).textTheme.headline3,
+                ),
+              ),
+              spacer(8.0),
+              SizedBox(
+                height: getProportionateScreenHeight(40),
+                width: getProportionateScreenWidth(328),
+                child: buildEmailFormField(),
+              ),
+              spacer(34.0),
+              RichText(
+                  text: TextSpan(
+                      text: "Already an existing user?",
+                      style: Theme.of(context).textTheme.headline4,
+                      children: [
+                    TextSpan(
+                      text: "\tLog In",
+                      style: const TextStyle(color: kPrimary),
+                      recognizer: TapGestureRecognizer()
+                        ..onTap = () {
+                          Navigator.pushNamed(context, SignUpScreen.routeName);
+                        },
+                    )
+                  ])),
+              spacer(25.0),
+              DefaultButton(
+                text: "SUBMIT",
+                press: () {
+                  if (_formKey.currentState!.validate()) {
+                    _formKey.currentState!.save();
+                    Navigator.pushNamed(context, Otp.routeName);
+                  }
+                },
+              ),
             ],
           ),
-          spacer(8.0),
-          Align(
-            alignment: Alignment.topLeft,
-            child: Text(
-              'Contact Number',
-              style: Theme.of(context).textTheme.headline5,
-            ),
-          ),
-          spacer(8.0),
-          SizedBox(
-            height: getProportionateScreenHeight(40),
-            width: getProportionateScreenWidth(328),
-            child: buildContactFormField(),
-          ),
-          spacer(16.0),
-          Align(
-            alignment: Alignment.topLeft,
-            child: Text(
-              'Email',
-              style: Theme.of(context).textTheme.headline5,
-            ),
-          ),
-          spacer(8.0),
-          SizedBox(
-            height: getProportionateScreenHeight(40),
-            width: getProportionateScreenWidth(328),
-            child: buildEmailFormField(),
-          ),
-          spacer(34.0),
-          RichText(
-              text: TextSpan(
-                  text: "Already an existing user?",
-                  style: Theme.of(context).textTheme.headline3,
-                  children: [
-                TextSpan(
-                  text: "\tLog In",
-                  style: const TextStyle(color: kPrimary),
-                  recognizer: TapGestureRecognizer()
-                    ..onTap = () {
-                      Navigator.pushNamed(context, SignUpScreen.routeName);
-                    },
-                )
-              ])),
-          spacer(25.0),
-          DefaultButton(
-            text: "SUBMIT",
-            press: () {
-              if (_formKey.currentState!.validate()) {
-                _formKey.currentState!.save();
-                Navigator.pushNamed(context, Otp.routeName);
-              }
-            },
-          ),
-        ],
-      ),
-    ));
+        ));
   }
 
   TextFormField buildFnameFormField() {

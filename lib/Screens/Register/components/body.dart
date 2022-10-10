@@ -28,10 +28,10 @@ class Body extends StatelessWidget {
                 ),
                 Text(
                   'We will send you an One Time Password on this \nmobile number.',
-                  style: Theme.of(context).textTheme.headline3,
+                  style: Theme.of(context).textTheme.headline4,
                   textAlign: TextAlign.center,
                 ),
-               const  RegisterForm(),
+                const RegisterForm(),
               ],
             ),
           ),

@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:studentapp/components/default_button.dart';
 import 'package:studentapp/constants.dart';
 import '../../../size_config.dart';
+import '../../Profile Edit/Profile_edit.dart';
 
 class OtpForm extends StatefulWidget {
   const OtpForm({super.key});
@@ -107,7 +108,7 @@ class _OtpFormState extends State<OtpForm> {
           RichText(
             text: TextSpan(
               text: "Haven’t recieved OTP?",
-              style: Theme.of(context).textTheme.headline3,
+              style: Theme.of(context).textTheme.headline4,
               children: [
                 TextSpan(
                     text: "\t RESEND OTP",
@@ -120,7 +121,7 @@ class _OtpFormState extends State<OtpForm> {
           DefaultButton(
             text: "SUBMIT",
             press: () {
-             // Navigator.pushNamed(context, ProfileScreen.routeName);
+              Navigator.pushNamed(context, ProfileEditScreen.routeName);
             },
           ),
         ]),

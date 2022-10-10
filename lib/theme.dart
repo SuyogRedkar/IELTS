@@ -28,9 +28,17 @@ TextTheme textTheme() {
         fontSize: 16,
         letterSpacing: 0.32,
         fontStyle: FontStyle.normal,
-        fontWeight: FontWeight.w400,
+        fontWeight: FontWeight.w600,
       ),
       headline3: TextStyle(
+        color: kAccent,
+        fontFamily: 'Outfit',
+        fontSize: 14,
+        letterSpacing: 0.32,
+        fontStyle: FontStyle.normal,
+        fontWeight: FontWeight.w600,
+      ),
+      headline4: TextStyle(
         color: kAccent,
         fontFamily: 'Outfit',
         fontSize: 12,
@@ -38,21 +46,13 @@ TextTheme textTheme() {
         fontStyle: FontStyle.normal,
         fontWeight: FontWeight.w400,
       ),
-      headline4: TextStyle(
+      headline5: TextStyle(
         color: kAccent,
         fontFamily: 'Outfit',
         fontSize: 10,
         letterSpacing: 0.32,
         fontStyle: FontStyle.normal,
         fontWeight: FontWeight.w400,
-      ),
-      headline5: TextStyle(
-        color: kAccent,
-        fontFamily: 'Outfit',
-        fontSize: 14,
-        letterSpacing: 0.32,
-        fontStyle: FontStyle.normal,
-        fontWeight: FontWeight.w600,
       ));
 }
 

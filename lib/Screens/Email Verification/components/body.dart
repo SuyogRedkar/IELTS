@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:studentapp/Screens/Otp/components/otp_form.dart';
-import 'package:studentapp/constants.dart';
-import 'package:studentapp/size_config.dart';
+import 'package:studentapp/Screens/Email%20Verification/components/email_verify_form.dart';
+
+import '../../../constants.dart';
+import '../../../size_config.dart';
 
 class Body extends StatelessWidget {
   const Body({super.key});
@@ -20,17 +21,26 @@ class Body extends StatelessWidget {
                 height: getProportionateScreenHeight(209),
               ),
               Text(
-                'OTP Verification',
+                'Enter your Email ID',
                 style: Theme.of(context).textTheme.headline1,
               ),
               spacer(10.0),
               Text(
-                'Enter the OTP sent on your Mobile number',
+                'We will send you a four digit code on this email ID.',
                 style: Theme.of(context).textTheme.headline4,
                 textAlign: TextAlign.center,
               ),
-              spacer(51.0),
-              const OtpForm()
+              spacer(29.0),
+              Align(
+                alignment: Alignment.topLeft,
+                child: Text(
+                  'Email ID',
+                  style: Theme.of(context).textTheme.headline3,
+                  textAlign: TextAlign.center,
+                ),
+              ),
+              spacer(8.0),
+              const EmailVerifyForm()
             ],
           ),
         ),
